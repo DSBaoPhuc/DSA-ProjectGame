@@ -50,6 +50,6 @@ Tran Bao Phuc : [Facebook](https://www.facebook.com/baophuclyk18.cla/)
 - Gmail: baophuc.itds.hcmiu@gmail.com
 - Edu: ITDSIU21109@student.hcmiu.edu.vn
 
-Project Link: [Github]()
+Project Link: [Github](https://github.com/DSBaoPhuc/DSA-ProjectGame.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
