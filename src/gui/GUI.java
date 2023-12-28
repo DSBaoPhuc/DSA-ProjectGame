@@ -5,8 +5,7 @@ import java.awt.FontFormatException;
 import java.io.IOException;
 import java.io.InputStream;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 import abstractFactory.AbstractFactory;
 import sound.Sound;
@@ -21,6 +20,8 @@ public class GUI extends JFrame {
     protected Sound sound;
     protected JPanel panel;
     protected Font font;
+
+    ImageIcon img = new ImageIcon("src/assets/img/light/gui/Egg_icon.png");
 
     /**
      * Create the frame. Receives by parameter a factory.
@@ -39,6 +40,8 @@ public class GUI extends JFrame {
      * Initialize the GUI.
      */
     private void initialize() {
+        setIconImage(img.getImage());
+        setTitle("COLLECT Game");
         setSize((int)factory.getScreenResolution().getWidth() + 16, (int) factory.getScreenResolution().getHeight() + 39);
         getContentPane().setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
