@@ -1,20 +1,25 @@
 <a name="readme-top"></a>
 
-## About The Project
-- Game final project for the IU' 2023 Data Structure & Algorithms course.
--
-## MineSweeper
+## I. About The Project
+### Game final project for the IU' 2023 Data Structure & Algorithms course.
+- The "Collect Game" – the ultimate game of skill and precision!
+- In this fast-paced and entertaining challenge, players take on the role with collecting falling blocksfrom the sky. The goal is simple: catch as many blocks as possible
+- Players navigate through a colorful and dynamic environment where blocks rain down at varying speeds. Each successfully caught block adds to your score, but beware – let one slip, and you will losing valuable points. The game's engaging mechanics and vibrant graphics create an immersive experience that keeps players hooked and coming back for more.
 
+## Collect Game
 
+![BG.png](src/assets/img/light/gui/BG.png)
 
-## My Team
+## II. My Team 
 ### Group 22
-* Tran Bao Phuc - ITDSIU21109
-* Nguyen Nam - ITDSIU21101
-* Phan Danh Duc - 
-* Hoang Van Long - 
+| Student's ID | Full Name      |
+|--------------|----------------|
+| ITDSIU21109  | Trần Bảo Phúc  |
+| ITDSIU21096  | Hoàng Văn Long |
+| ITDSIU21012  | Phan Danh Đức  |
+| ITDSIU21101  | Nguyễn Nam     |
 
-## Getting Started
+## III. Getting Started
 
 ### Prerequisites
 
@@ -28,11 +33,11 @@
 
 * Clone the repo
 
-## Usage
+## IV. Usage
 
 ### To play
 
-1. Open folder ...
+1. Open folder "DSA Game"
 2. src -> main package -> Launcher.java -> Run
 
 ### Instruction
@@ -44,7 +49,7 @@
 ### Class Diagrams
 * [UML]()
 
-## Contact
+## V. Contact
 
 Tran Bao Phuc : [Facebook](https://www.facebook.com/baophuclyk18.cla/)
 - Gmail: baophuc.itds.hcmiu@gmail.com
