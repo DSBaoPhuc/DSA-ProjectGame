@@ -1,8 +1,8 @@
 package gui;
 import javax.swing.JPanel;
 
-import games.collect.gui.Difficulties;
-import games.collect.gui.Panel_Collect;
+import game.collect.gui.Difficulties;
+import game.collect.gui.Panel_Collect;
 
 import general.gui.GeneralPanel;
 import general.utilities.InternalBorderRound;

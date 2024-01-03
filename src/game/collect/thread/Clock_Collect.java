@@ -1,6 +1,6 @@
-package games.collect.thread;
+package game.collect.thread;
 
-import games.collect.logic.Game_Collect;
+import game.collect.logic.Game_Collect;
 
 public class Clock_Collect extends Thread{
     protected Game_Collect game;

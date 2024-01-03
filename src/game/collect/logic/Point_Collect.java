@@ -1,4 +1,4 @@
-package games.collect.logic;
+package game.collect.logic;
 
 import abstractFactory.AbstractFactory;
 import general.logic.Cell;

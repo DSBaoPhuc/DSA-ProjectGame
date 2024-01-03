@@ -1,7 +1,7 @@
-package games.collect.logic;
+package game.collect.logic;
 
-import games.collect.gui.Panel_Collect;
-import games.collect.thread.Clock_Collect;
+import game.collect.gui.Panel_Collect;
+import game.collect.thread.Clock_Collect;
 import general.logic.Game;
 
 public class Game_Collect extends Game{

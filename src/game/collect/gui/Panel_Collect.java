@@ -1,9 +1,9 @@
-package games.collect.gui;
+package game.collect.gui;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import games.collect.logic.Game_Collect;
+import game.collect.logic.Game_Collect;
 import general.gui.GamePanel;
 import general.logic.Game;
 import gui.GUI;

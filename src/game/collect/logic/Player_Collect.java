@@ -1,11 +1,9 @@
-package games.collect.logic;
+package game.collect.logic;
 
 import abstractFactory.AbstractFactory;
 import general.logic.Cell;
 import general.logic.GraphicCell;
 import sound.Sound;
-
-import general.logic.Map;
 
 public class Player_Collect {
     protected Cell[] player;

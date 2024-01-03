@@ -1,4 +1,4 @@
-package games.collect.logic;
+package game.collect.logic;
 
 import general.logic.Map;
 

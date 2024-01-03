@@ -4,7 +4,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import abstractFactory.AbstractFactory;
-import games.collect.logic.Game_Collect;
+import game.collect.logic.Game_Collect;
 import general.data.PlayerScore;
 import general.data.StatsData;
 import general.data.PlayersRegistry;
