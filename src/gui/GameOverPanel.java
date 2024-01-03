@@ -165,7 +165,6 @@ public class GameOverPanel extends GeneralPanel{
             public void mouseExited(MouseEvent e) {
                 e.getComponent().setBackground(gui.getImageFactory().getDefaultMarkColor());
             }
-
         };
     }
 }

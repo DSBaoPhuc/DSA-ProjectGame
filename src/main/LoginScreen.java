@@ -13,7 +13,7 @@ public class LoginScreen extends JFrame {
     private JTextField usernameField;
     private JPasswordField passwordField;
 
-    ImageIcon img = new ImageIcon("src/assets/img/light/gui/Egg_icon.png");
+    protected ImageIcon img = new ImageIcon("src/assets/img/light/gui/Egg_icon.png");
 
     public LoginScreen() {
         setIconImage(img.getImage());

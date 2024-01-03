@@ -21,7 +21,7 @@ public class GUI extends JFrame {
     protected JPanel panel;
     protected Font font;
 
-    ImageIcon img = new ImageIcon("src/assets/img/light/gui/Egg_icon.png");
+    protected ImageIcon img = new ImageIcon("src/assets/img/light/gui/Egg_icon.png");
 
     /**
      * Create the frame. Receives by parameter a factory.
