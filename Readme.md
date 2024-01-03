@@ -37,7 +37,7 @@
 
 ### To play
 
-1. Open folder "DSA Game"
+1. Open folder "DSA-ProjectGame"
 2. src -> main package -> Launcher.java -> Run
 
 ### Instruction
@@ -47,8 +47,8 @@
 * [Demo Video]()
 
 ### Class Diagrams
-* [UML]()
-
+* [General UML](https://drive.google.com/file/d/1OXPh8VQaYmViyyPPb4I-Vn-wW-sAOANd/view?usp=sharing)
+* [Specific UML](https://drive.google.com/drive/folders/1XQjfDdlJzKVDPU74ppyN-yjmz8gJbJ_w?usp=sharing)
 ## V. Contact
 
 Tran Bao Phuc : [Facebook](https://www.facebook.com/baophuclyk18.cla/)
