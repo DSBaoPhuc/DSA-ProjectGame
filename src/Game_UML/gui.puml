@@ -1,0 +1,92 @@
+@startuml
+package gui{
+    class ConfigurationPanel extends GeneralPanel{
+        - {static} final long serialVersionUID = 1L
+        # JButton[][] lightMatrix
+        # JPanel lightPanel
+        # Color light_1
+        # Color light_2
+        # Color light_3
+        # Color light_4
+        # Color light_5
+        # Color light_6
+        # Color light_7
+        # Color light_8
+        # Color light_9
+
+        # JButton[][] darkMatrix
+        # JPanel darkPanel
+        # Color dark_1
+        # Color dark_2
+        # Color dark_3
+        # Color dark_4
+        # Color dark_5
+        # Color dark_6
+        # Color dark_7
+        # Color dark_8
+        # Color dark_9
+
+        # JLabel lblBg
+
+        + ConfigurationPanel(GUI gui)
+        - void createPanelLight()
+        - void createPanelDark()
+        - void createLblBg()
+        - void putBottonsLight()
+        - void putBottonsDark()
+        - MouseAdapter getMouseAdapter()
+    }
+
+    class GameOverPanel extends GeneralPanel{
+        - {static} final long serialVersionUID = 1L
+        # JButton restart
+        # JButton exit
+        # JButton home
+        # JLabel lblBg
+        # JLabel lblBg_2
+        # JLabel lblRes
+        # JLabel lblScore
+        # JLabel lblTime
+        # JPanel btnPanel
+        # GamePanel gamePanel
+        # Color color_1
+        # Color color_2
+
+        + GameOverPanel()
+        - void createLabels()
+        - void createButtons()
+        - MouseAdapter getMouseAdapter()
+    }
+
+    class GUI extends JFrame {
+        - {static} final long serialVersionUID = 1L
+        # AbstractFactory factory
+        # Sound sound
+        # JPanel panel
+        # Font font
+        # ImageIcon img
+
+        + GUI(AbstractFactory factory, Sound sound)
+        - void initialize()
+        + void setPanel(JPanel p)
+        + AbstractFactory getImageFactory()
+        + void setImageFactory(AbstractFactory factory)
+        + Sound getSound()
+        - void createFont()
+        + Font getTheFont()
+    }
+    
+    class InitialPanel extends GeneralPanel{
+        - {static} final long serialVersionUID = 1L
+        # JButton[][] matrix
+        # JButton btnConfiguration
+        # JPanel panel
+        
+        + InitialPanel(GUI gui)
+        - void createPanel()
+        - void putBottons()
+        - MouseAdapter getMouseAdapter()
+    }
+}
+
+@enduml

@@ -1,0 +1,97 @@
+@startuml
+package collect{
+    package thread{
+        class Clock_Collect extends Thread{
+            # Game_Collect game;
+            # boolean active;
+            # int step;
+
+            + Clock_Collect(Game_Collect game, int step)
+            + void setStep(int step)
+            + int getStep()
+            + void run()
+        }
+    }
+    package gui{
+        class Difficulties extends GeneralPanel{
+            - {static} final long serialVersionUID = 1L
+            # JButton[][] matrix
+            # JButton btnConfiguration
+            # JPanel panel
+
+            + Difficulties(GUI gui)
+            - void createPanel()
+            - void putBottons()
+            - MouseAdapter getMouseAdapter()
+            + void setDifficulty(Game_Collect.Difficulty difficulty)
+        }
+
+        class Panel_Collect extends GamePanel{
+            - static final long serialVersionUID = 1L
+            # Game_Collect game
+
+            + Panel_Collect(GUI gui)
+            + Panel_Collect(GUI gui, Game_Collect.Difficulty difficulty )
+            + void lose()
+            + void restart()
+            + String getFileToSavePath()
+            # void addControls()
+            + void setDifficulty(Game_Collect.Difficulty difficulty)
+        }
+    }
+
+    package logic{
+        class Point_Collect {
+            # Cell point
+            # GraphicCell representation
+            # Map_Collect map
+            # AbstractFactory imageFactory
+
+            + Point_Collect(Map_Collect map, AbstractFactory imageFactory)
+            + void move()
+            + void charge()
+        }
+
+        class Map_Collect extends Map{
+            # Game_Collect game
+            + Map_Collect(Game_Collect game)
+        }
+
+        class Player_Collect {
+            # Cell[] player
+            # AbstractFactory imageFactory
+            # Sound sound
+            # Map_Collect map
+            # GraphicCell representation
+
+            + Player_Collect(Map_Collect map, AbstractFactory imageFactory, Sound sound)
+            + void moveLeft()
+            + void moveRight()
+        }
+
+        class Game_Collect extends Game{
+            # Player_Collect player
+            # Clock_Collect clock_collect
+            # int tick
+            # Point_Collect point_1
+            # Point_Collect point_2
+            # Point_Collect point_3
+            # Point_Collect point_4
+            # Point_Collect point_5
+            - Difficulty currentDifficulty
+
+            + Game_Collect(Panel_Collect panel)
+            + Game_Collect(Panel_Collect panel, Game_Collect.Difficulty difficulty)
+            + synchronized void run()
+            + void operate(int operation)
+            + void addPoints(int points)
+            + enum Difficulty{
+                 EASY,
+                 MEDIUM,
+                 HARD;
+            }
+        }
+    }
+}
+
+@enduml

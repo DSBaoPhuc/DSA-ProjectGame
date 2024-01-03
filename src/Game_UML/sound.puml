@@ -1,0 +1,26 @@
+@startuml
+    package sound{
+        class Sound {
+            - SoundClip move
+            - SoundClip point
+            - SoundClip finish
+            - SoundClip level
+            - SoundClip pause
+
+            + Sound()
+            + void moveSound()
+            + void pointSound()
+            + void finishSound()
+            + void levelSound()
+            + void pauseSound()
+        }
+
+        class SoundClip {
+            - Clip audioClip
+            - AudioInputStream audioStream
+
+            + SoundClip(String path)
+            + void play()
+        }
+    }
+@enduml

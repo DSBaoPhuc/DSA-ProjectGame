@@ -1,0 +1,75 @@
+@startuml
+package abstractFactory{
+    abstract class AbstractFactory {
+        # int screenWidth;
+        # int screenHeight;
+        # Color colorDefault;
+        # Color colorForeground;
+        + {static} final int DEFAULT_WIDTH = 1920;
+        + {static} final int DEFAULT_HEIGHT = 1080;
+
+        # ImageIcon getTheIcon(String path)
+        # ImageIcon scale(ImageIcon imageIcon)
+        + AbstractFactory(Dimension resolution)
+        + void setColorDefault(Color colorDefault)
+        + void setScreenResolution(Dimension resolution)
+        + Dimension getScreenResolution()
+        + {abstract} Color getColorDefault()
+        + {abstract} Color getColorForeground()
+        + {abstract} Color getDefaultMarkColor()
+        + {abstract} Icon getConfiguration()
+        + {abstract} Icon getRestart()
+        + {abstract} Icon getHome()
+        + {abstract} Icon getExit()
+        + {abstract} Icon getGameIcon(String name)
+        + {abstract} Icon getKeyboard6()
+        + {abstract} Icon getEmpty()
+        + {abstract} Icon getTriangle()
+        + {abstract} Icon getCircle()
+    }
+
+    class DarkFactory extends AbstractFactory{
+        - Icon triangle;
+        - Icon circle;
+
+        + DarkFactory(Dimension resolution)
+        + DarkFactory(Dimension resolution, Color colorDefault)
+        + void setScreenResolution(Dimension resolution)
+        - void createCommonIcons()
+        + Color getColorDefault()
+        + Color getColorForeground()
+        + Color getDefaultMarkColor()
+        + Icon getGameIcon(String name)
+        + Icon getKeyboard6()
+        + Icon getRestart()
+        + Icon getHome()
+        + Icon getExit()
+        + Icon getConfiguration()
+        + Icon getEmpty()
+        + Icon getTriangle()
+        + Icon getCircle()
+    }
+
+    class LightFactory extends AbstractFactory{
+        - Icon triangle;
+        - Icon circle;
+
+        + LightFactory(Dimension resolution)
+        + LightFactory(Dimension resolution, Color colorDefault)
+        + void setScreenResolution(Dimension resolution)
+        - void createCommonIcons()
+        + Color getColorDefault()
+        + Color getColorForeground()
+        + Color getDefaultMarkColor()
+        + Icon getGameIcon(String name)
+        + Icon getKeyboard6()
+        + Icon getRestart()
+        + Icon getHome()
+        + Icon getExit()
+        + Icon getConfiguration()
+        + Icon getEmpty()
+        + Icon getTriangle()
+        + Icon getCircle()
+    }
+}
+@enduml

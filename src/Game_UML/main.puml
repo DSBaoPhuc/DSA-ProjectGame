@@ -1,0 +1,21 @@
+@startuml
+package main{
+     class Launcher {
+        + {static} void main(String args[])
+     }
+
+     class LoginScreen extends JFrame {
+        - JTextField usernameField
+        - JPasswordField passwordField
+        # ImageIcon img
+
+        + LoginScreen()
+        - void placeComponents(JPanel panel)
+        - void onLogin()
+        + {static} void run()
+     }
+}
+
+
+
+@enduml

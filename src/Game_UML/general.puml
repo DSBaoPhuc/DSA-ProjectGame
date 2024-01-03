@@ -1,0 +1,194 @@
+@startuml
+package general{
+    package data{
+        class PlayerScore implements Serializable, Comparable {
+            - {static} final long serialVersionUID = 1L
+            - int score
+
+            + PlayerScore(int score)
+            + String getScore()
+            + int compareTo(PlayerScore playerScore)
+        }
+
+        class PlayersRegistry implements Serializable {
+            - {static} {final} long serialVersionUID = 1L
+            # PlayerScore ps
+
+            + PlayersRegistry()
+            + void addPlayer(PlayerScore p)
+            + PlayerScore getScores()
+        }
+
+        class StatsData implements Serializable {
+            - {static} final long serialVersionUID = 1L
+            # GamePanel panel
+
+            + StatsData(GamePanel panel)
+            + PlayersRegistry load()
+            + void save(PlayersRegistry topPlayers)
+        }
+    }
+
+    package gui{
+        abstract class GamePanel extends GeneralPanel{
+            - {static} final long serialVersionUID = 1L
+            # JLabel[][] matrix
+            # JPanel panel
+            # JLabel lblTime
+            # JLabel lblLevel
+            # JLabel lblScore
+            # JLabel lblHighScore
+            # JLabel lblKeyboard
+            # JLabel lblMouse
+            # JLabel lblBg
+            # int score
+            # String fileToSavePath
+
+            + GamePanel(GUI gui, boolean isHorizontal)
+            # void load()
+            # void save()
+            + {abstract} String getFileToSavePath()
+            + {abstract} void lose()
+            + {abstract} void restart()
+            # {abstract} void addControls()
+            + void setPoints(String score)
+            + void setTime(String time)
+            + void setLevel(String level)
+            + void changeCell(JLabel graphicCell, int row, int column)
+            + AbstractFactory getImageFactory()
+            + Sound getSound()
+            - void createStats()
+            - void createVertical()
+            - void createHorizontal()
+            - void createCentralPanel()
+            + {abstract} void setDifficulty(Game_Collect.Difficulty difficulty)
+        }
+
+        abstract class GeneralPanel extends JPanel{
+            - {static} final long serialVersionUID = 1L
+            # GUI gui
+            # Font font
+            # double scaleFactor
+
+            + GeneralPanel(GUI gui)
+        }
+    }
+
+    package logics{
+        class Cell {
+            # int row
+            # int column
+            # Map map
+            # GraphicCell gc
+            # boolean free
+
+            + Cell(int row, int column, Map map)
+            + GraphicCell getGraphicCell()
+            + void put(GraphicCell gc)
+            + void clear()
+            + int getRow()
+            + int getColumn()
+            + boolean isFree()
+        }
+
+        abstract class Game {
+            + {static} final int MOVE_RIGHT = 6
+            + {static} final int MOVE_LEFT = 4
+            # GamePanel panel
+            # Clock clock
+            # int seconds
+            # int level
+            # int points
+            # boolean gameOver
+            # boolean pause
+
+            + Game(GamePanel panel)
+            + void changeCell(Cell cell)
+            + void addPoints(int points)
+            + void addLevel()
+            + void addSecond()
+            + boolean isGameOver()
+            + AbstractFactory getImageFactory()
+            + void lose()
+            + void pause()
+            + boolean isPause()
+            + void repaint()
+            + abstract void operate(int operation)
+        }
+
+        class GraphicCell extends JLabel{
+            - {static} final long serialVersionUID = 1L
+
+            + GraphicCell(Icon icon, Color color)
+        }
+
+        abstract class Map {
+            + {static} final int ROW = 9
+            + {static} final int COLUMN = 16
+            # Cell[][] matrix
+            # Game game
+            # GraphicCell freeCell
+
+            + Map(Game game, boolean isHorizontal)
+            + Cell getCell(int r, int c)
+            + GraphicCell getFreeCell()
+            + void changeCell(Cell cell)
+            + void addPoints(int points)
+            + void lose()
+        }
+    }
+
+    package threads{
+        class Clock extends Thread{
+            # boolean active
+            # Game game
+            # long currentTime
+            # int FPS
+
+            + Clock(Game game)
+            + void run()
+        }
+    }
+
+    package utilities{
+        class InternalBorder extends AbstractBorder{
+            - int top
+            - int right
+            - int bottom
+            - int left
+            - Color color
+            - final RenderingHints antialising
+
+            + InternalBorder(Color color)
+            + InternalBorder()
+            + InternalBorder(int size, Color color)
+            + void paintBorder()
+        }
+
+        class InternalBorderRound extends AbstractBorder{
+            - {static} final long serialVersionUID = 1L
+            - int top
+            - int right
+            - int bottom
+            - int left
+            - int radius
+            - Color color
+            - final RenderingHints antialising
+
+            + InternalBorderRound(Color color)
+            + InternalBorderRound()
+            + InternalBorderRound()
+            + void paintBorder()
+        }
+
+        class NRandom extends Random{
+            - {static} final long serialVersionUID = 1L
+            - {static} NRandom instance
+
+            - NRandom()
+            + {static} NRandom getInstance()
+        }
+    }
+}
+
+@enduml
