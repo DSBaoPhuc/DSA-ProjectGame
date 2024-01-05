@@ -72,7 +72,7 @@ public class LoginScreen extends JFrame {
                 username.equals("nam") && password.equals("nam") ||
                 username.equals("long") && password.equals("long")) {
 
-            JOptionPane.showMessageDialog(loginDialog, "Login successful!");
+//            JOptionPane.showMessageDialog(loginDialog, "Login successful!");
 
             GUI gui = new GUI(new DarkFactory(new Dimension(1280, 720)), new Sound());
             gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

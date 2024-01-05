@@ -4,6 +4,9 @@ import abstractFactory.AbstractFactory;
 import general.logic.Cell;
 import general.logic.GraphicCell;
 import general.utilities.NRandom;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Random;
 
 public class Point_Collect {
     protected Cell point;
@@ -41,8 +44,20 @@ public class Point_Collect {
 
     }
 
+//    public void charge() {
+//        point = map.getCell(15, Math.abs(NRandom.getInstance().nextInt() % 9));
+//        point.put(representation);
+//    }
+
     public void charge() {
-        point = map.getCell(15, Math.abs(NRandom.getInstance().nextInt() % 9));
+        Queue<Integer> availableColumns = new LinkedList<>();
+
+        Random random = new Random();
+        int randomIndex = random.nextInt(9);  availableColumns.offer(randomIndex);
+
+        int selectedColumn = availableColumns.poll();
+
+        point = map.getCell(15, selectedColumn);
         point.put(representation);
     }
 
