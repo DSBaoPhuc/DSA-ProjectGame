@@ -2,7 +2,6 @@ package general.data;
 
 import java.io.Serializable;
 
-
 public class PlayerScore implements Serializable, Comparable<PlayerScore> {
     private static final long serialVersionUID = 1L;
     private int score;
@@ -30,6 +29,4 @@ public class PlayerScore implements Serializable, Comparable<PlayerScore> {
         }
         return toReturn;
     }
-
-
 }

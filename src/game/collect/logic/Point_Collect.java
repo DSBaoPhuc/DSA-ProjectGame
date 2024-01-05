@@ -3,7 +3,6 @@ package game.collect.logic;
 import abstractFactory.AbstractFactory;
 import general.logic.Cell;
 import general.logic.GraphicCell;
-import general.utilities.NRandom;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
@@ -13,6 +12,7 @@ public class Point_Collect {
     protected GraphicCell representation;
     protected Map_Collect map;
     protected AbstractFactory imageFactory;
+    private Queue<Integer> availableColumns;
 
     public Point_Collect(Map_Collect map, AbstractFactory imageFactory) {
         this.map = map;
@@ -44,21 +44,30 @@ public class Point_Collect {
 
     }
 
-//    public void charge() {
-//        point = map.getCell(15, Math.abs(NRandom.getInstance().nextInt() % 9));
-//        point.put(representation);
-//    }
-
     public void charge() {
-        Queue<Integer> availableColumns = new LinkedList<>();
+        Integer[] columnIndex = {0, 1, 2, 3, 4, 5,6,7,8};
+        availableColumns = new LinkedList<>();
+        for (int column : columnIndex) {
+            availableColumns.offer(column);}
+        if (!availableColumns.isEmpty()) {
+            int randomColumn = getRandomColumn();
+            point = map.getCell(15, randomColumn);
+            point.put(representation);
+        } else {
+            System.out.println("ERROR");
+        }
+    }
 
-        Random random = new Random();
-        int randomIndex = random.nextInt(9);  availableColumns.offer(randomIndex);
+    private int getRandomColumn() {
+        int randomIndex = new Random().nextInt(availableColumns.size());
+        int selectedColumn = 0;
 
-        int selectedColumn = availableColumns.poll();
+        for (int i = 0; i <= randomIndex; i++) {
+            selectedColumn = availableColumns.poll();
+//            System.out.println(selectedColumn);
+        }
 
-        point = map.getCell(15, selectedColumn);
-        point.put(representation);
+        return selectedColumn;
     }
 
 }

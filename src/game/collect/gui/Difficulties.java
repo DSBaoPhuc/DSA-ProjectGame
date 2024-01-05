@@ -87,7 +87,7 @@ public class Difficulties extends GeneralPanel{
         });
         panel.add(medButton);
 
-        //create medium level button
+        //create hard level button
         JButton hardButton = new JButton("Hard");
         hardButton.setFont(new Font("ALGERIAN", Font.PLAIN, fontSize));
         hardButton.setBackground(gui.getImageFactory().getDefaultMarkColor());

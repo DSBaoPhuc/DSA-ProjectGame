@@ -42,7 +42,6 @@ public class Clock extends Thread{
             active = !game.isGameOver();
         }
     }
-
     public void stopWatch() {
         this.active = false;
     }

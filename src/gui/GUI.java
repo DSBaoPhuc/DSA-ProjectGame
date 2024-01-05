@@ -12,9 +12,6 @@ import sound.Sound;
 
 public class GUI extends JFrame {
 
-    /**
-     * SerialVersionUID
-     */
     private static final long serialVersionUID = 1L;
     protected AbstractFactory factory;
     protected Sound sound;
@@ -23,11 +20,6 @@ public class GUI extends JFrame {
 
     protected ImageIcon img = new ImageIcon("src/assets/img/light/gui/Egg_icon.png");
 
-    /**
-     * Create the frame. Receives by parameter a factory.
-     * @param factory a factory.
-     * @param sound a sound object.
-     */
     public GUI(AbstractFactory factory, Sound sound) {
         this.factory = factory;
         this.sound = sound;
@@ -36,9 +28,6 @@ public class GUI extends JFrame {
         createFont();
     }
 
-    /**
-     * Initialize the GUI.
-     */
     private void initialize() {
         setIconImage(img.getImage());
         setTitle("COLLECT Game");
@@ -51,10 +40,6 @@ public class GUI extends JFrame {
         setPanel(new InitialPanel(this));
     }
 
-    /**
-     * Set a panel passed by parameter in the frame.
-     * @param p the panel.
-     */
     public void setPanel(JPanel p) {
         getContentPane().remove(panel);
         panel = p;
@@ -64,33 +49,18 @@ public class GUI extends JFrame {
         repaint();
     }
 
-    /**
-     * Return the factory.
-     * @return the factory.
-     */
     public AbstractFactory getImageFactory() {
         return factory;
     }
 
-    /**
-     * Set a factory.
-     * @param factory
-     */
     public void setImageFactory(AbstractFactory factory) {
         this.factory = factory;
     }
 
-    /**
-     * Return the object.
-     * @return the object.
-     */
     public Sound getSound() {
         return sound;
     }
 
-    /**
-     * Create the font.
-     */
     private void createFont() { // Since the GUI is created only once, the font is also created only once.
         font = null;
         try {
@@ -101,10 +71,6 @@ public class GUI extends JFrame {
         }
     }
 
-    /**
-     * Return the font.
-     * @return the font.
-     */
     public Font getTheFont() {
         return font;
     }

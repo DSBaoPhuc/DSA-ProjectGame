@@ -2,7 +2,6 @@ package abstractFactory;
 
 import java.awt.Color;
 import java.awt.Dimension;
-
 import javax.swing.Icon;
 
 public class LightFactory extends AbstractFactory{
