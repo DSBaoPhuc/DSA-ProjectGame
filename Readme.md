@@ -11,7 +11,7 @@
 ![BG.png](src/assets/img/light/gui/BG.png)
 
 ## II. My Team 
-### Group 22
+### Group 1
 | Student's ID | Full Name      |
 |--------------|----------------|
 | ITDSIU21109  | Trần Bảo Phúc  |
@@ -30,7 +30,7 @@
     * [Git](https://git-scm.com/downloads)
 
 ### Installation
-
+* Project Link: [Github](https://github.com/DSBaoPhuc/DSA-ProjectGame.git)
 * Clone the repo
 
 ## IV. Usage
@@ -40,21 +40,20 @@
 1. Open folder "DSA-ProjectGame"
 2. src -> main package -> Launcher.java -> Run
 
-### Instruction
-* [Instruction How to Play Video]()
-
 ### Demo
-* [Demo Video]()
+* [Demo Video](https://drive.google.com/file/d/1jdtFAZ6KCboY9iEuIqM84btHXIpnPJn2/view?fbclid=IwAR2sByOTQNSxDmhq2BOqw5Ay_iGtBjU_z12cCq-lyts2cqM29ctMeSlDA74)
 
 ### Class Diagrams
 * [General UML](https://drive.google.com/file/d/1OXPh8VQaYmViyyPPb4I-Vn-wW-sAOANd/view?usp=sharing)
 * [Specific UML](https://drive.google.com/drive/folders/1XQjfDdlJzKVDPU74ppyN-yjmz8gJbJ_w?usp=sharing)
+
+### Chart Rule
+* [Game Chart Rule](https://drive.google.com/file/d/1jYwAI4ZNG0NPXF9Q8yDdB2Qj03biNWb8/view?usp=sharing)
+
 ## V. Contact
 
 Tran Bao Phuc : [Facebook](https://www.facebook.com/baophuclyk18.cla/)
 - Gmail: baophuc.itds.hcmiu@gmail.com
 - Edu: ITDSIU21109@student.hcmiu.edu.vn
-
-Project Link: [Github](https://github.com/DSBaoPhuc/DSA-ProjectGame.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
