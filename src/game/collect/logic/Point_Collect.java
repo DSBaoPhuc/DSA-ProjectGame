@@ -64,7 +64,6 @@ public class Point_Collect {
 
         for (int i = 0; i <= randomIndex; i++) {
             selectedColumn = availableColumns.poll();
-//            System.out.println(selectedColumn);
         }
 
         return selectedColumn;

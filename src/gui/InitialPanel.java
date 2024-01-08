@@ -67,7 +67,7 @@ public class InitialPanel extends GeneralPanel{
         panel.add(playButton);
 
         //create select level button
-        JButton lvButton = new JButton("Select Level");
+        JButton lvButton = new JButton("Select Difficulty");
         lvButton.setFont(new Font("ALGERIAN", Font.PLAIN, fontSize));
         lvButton.setBackground(gui.getImageFactory().getDefaultMarkColor());
         lvButton.setFocusable(false);
